@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lattitude</title>
+</head>
+<style>
+    h1{
+        color: rgb(108, 174, 9);
+        text-align: center;
+        font-size: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;     
+    }
+    .lat{
+        color: rgb(20, 11, 108);
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .img{
+        text-align: center;
+    }
+    .lat li{
+        padding-left: 20px;
+    }
+   
+</style>
+<body>
+    <h1>LATITUDE AND LONGITUDE</h1>
+    <div class="lat">
+    <li>Latitudes are horizontal lines that measure distance north or south of the equator.</li>
+    <li>Longitudes are vertical lines that measure east or west of the meridian in Greenwich, England.</li> 
+    <li>In this site,Track the movement of three gulls namely-<b>Eric, Nico & Sanne</b></li>
+    </div>
+    <div class="img">
+        <br><br><br>
+        <img src="{% static 'images/latti.png' %}" width="700" height="600">
+        <br><br><br><br>
+        <img src="{% static 'images/longi.png' %}" width="700" height="600">
+    </div>
+</body>
+</html>

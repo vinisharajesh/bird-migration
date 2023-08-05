@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birddetails</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    * {
+    margin-top: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    }
+    body {
+    background: rgb(241, 243, 237);
+    justify-content: center;
+    align-items: center;
+   
+    }
+    .container {
+    margin-top:0%;
+    display: flex;
+    padding: 15px;
+    border-radius: 5px;
+    background: #4cc912;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+.container li {
+    margin: 0 25px;
+}
+.container li a {
+    font-size: 2em;
+    transition: 0.5s;
+    color:aliceblue;
+}
+.container:hover li a {
+    color:aliceblue;
+}
+.container:hover li a:not(:hover) {
+    color:aliceblue;
+    opacity: 0.3;
+}
+
+/*  styling the body */
+
+
+
+.containerp {
+  height: 100%;
+  width: 100%;
+}
+
+.p {
+  position: absolute;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 500px) {
+  .p {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .p {
+    font-size: 5rem;
+  }
+}
+
+.p1 {
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+  color: rgb(16, 203, 209);
+}
+
+.p2 {
+  color: rgb(127, 224, 46);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  animation: text-animation 3s ease-in-out forwards alternate infinite;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+}
+
+.p3 {
+  height: 20%;
+  color: transparent;
+}
+
+@keyframes text-animation {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 0% 1%, 0% 100%, 0% 100%);
+  }
+}
+
+.cursor {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(0, -50%);
+  border-right: 2px solid rgb(255, 217, 0);
+  animation: cursor-animation 3s ease-in-out forwards alternate infinite;
+}
+
+@keyframes cursor-animation {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+h1{
+    font-family:'Courier New', Courier, monospace;
+    /* color:#4cc912; */
+}
+h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:0%;
+}
+#h1i{
+  margin-top:5%;
+  text-align:center;
+  border-radius: 50px;
+
+}
+
+#b1{
+
+  margin-top:40px;
+  margin-left: 45%;
+  padding-left:3%;
+  padding-right:3%;
+  border-radius:12px;
+  background: #6dd10f;
+  color: rgb(31, 95, 192);
+  
+}
+    </style>
+</head>
+<body>
+   
+    <!-- <h1>Bird Tracking System</h1>
+    <br>
+    <br>
+    <h3>With the Help of us Get Full details of Birds.</h3>
+    <h4> <a>Login</a> Here !!!!!!</h4> -->
+
+    <div id="BrushCursor">
+        <div class="containerp">
+          <div class="p p1">Bird Tracking System</div>
+          <div class="p p2">Bird Tracking System</div>
+          <div class="p p3">
+            Bird Tracking System
+            <div class="cursor"></div>
+          </div>
+        </div>
+      </div>
+      <h1 style="margin-top:10%;text-align:center;margin-top:20%;">With the Help of us Get Full details of Birds.</h1>
+      <button id="b1" type="button" class="btn btn-primary btn-lg"><a href="{% url 'login' %}"> Login here</a></button>
+
+    
+</body>
+</html>
